@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+		<title>HW1 Calculator</title>
+		<style> p.inset {border-bottom-style: inset;}
+	     table{border:2px solid black;
+		 background-color: #FFFFCC;}
+		td {
+		text-align:center;
+		width: 50%;}
+		th,
+		td{
+		text-align:left;
+		}
+		
+		</style>
+		<script type="text/javascript">
+		function add(){
+		var x = document.getElementById("X").value;
+		var y = document.getElementById("Y").value;
+		var z = parseInt(x) + parseInt(y) ;
+		if (x==" " & y==" "){z=0;}
+		document.getElementById("Ans").value = z;
+		 // alert(z);
+		}
+		function subtract(){
+		
+		var x = document.getElementById("X").value;
+		var y = document.getElementById("Y").value;
+		z = parseInt(x) - parseInt(y) ;
+		document.getElementById("Ans").value = z;
+		}
+		function multiply(){
+		var x = document.getElementById("X").value;
+		var y = document.getElementById("Y").value;
+		var z = parseInt(x) * parseInt(y) ;
+		document.getElementById("Ans").value = z;
+		}
+		function divide(){
+		var x = document.getElementById("X").value;
+		var y = document.getElementById("Y").value;
+		var z = x / y ;
+		document.getElementById("Ans").value = z;
+		}
+		
+		</script>
+</head>
+	<body>
+	<h3>Calculator </h3>
+	<table>
+	<tr>
+	<td>X :</td>
+    <td><p class ="inset"><input id="X" type=text Name="display"></p></td>
+    </tr>
+	<tr>
+	<td>Y :</td>
+    <td><p class ="inset"><input id="Y" type=text Name="display"></p></td>
+    </tr>
+	<tr>
+	<td colspan=2><input type="button" name="button" value="+" onclick="add()"/>
+	<input type="button" name="button" value="-" onclick="subtract()"/>
+	<input type="button" name="button" value="*" onclick="multiply()"/>
+	<input type="button" name="button" value="/" onclick="divide()"/></td>
+	</tr>
+	<tr>
+	<th>Ans :</th>
+     <th><p class ="inset"><input id="Ans" type=text Name="display" readonly></p></th>
+	</tr>
+	</table>
+	</body>
+</html>
